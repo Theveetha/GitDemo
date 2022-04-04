@@ -1,0 +1,172 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-04T13:01:49.565Z",
+        "line": 14,
+        "name": "Verfiy if Place is being successfully added using AddPlace API",
+        "description": "",
+        "id": "validating-place-api-s;verfiy-if-place-is-being-successfully-added-using-addplace-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1492665200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add Place Payload with \"Tom\" \"HIG II-15\" \"Tamil\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Tom\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"HIG II-15\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"Tamil\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.StepDefinitions.add_Place_Payload_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1476606600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User calls \"getAddPlace\" with \"Post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"getAddPlace\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefinitions.StepDefinitions.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1001700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "API call is success with Status Code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 37
+                }
+              ],
+              "location": "StepDefinitions.StepDefinitions.api_call_is_success_with_Status_Code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 558834500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinitions.StepDefinitions.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14706000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefinitions.StepDefinitions.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2688656200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify \"place_id\" created maps to \"Tom\" using \"getGetPlace\" for \"name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"place_id\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"Tom\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"getGetPlace\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"name\"",
+                  "offset": 64
+                }
+              ],
+              "location": "StepDefinitions.StepDefinitions.verify_created_maps_to_using(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/PlaceValidations.feature",
+    "tags": []
+  }
+]
